@@ -1,0 +1,70 @@
+@font-face {
+    font-family: Raleway;
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: Metropolis;
+    src: url("../fonts/metropolis-light-webfont.woff2");
+}
+
+$bgColor: #86a184;
+$grey: #999999;
+$darkGrey: #666666;
+$lightGreen: #51b05a;
+$white: #fff;
+$disable: #bed1bf;
+
+body {
+    font-family: Raleway;
+    background-color: $bgColor;
+
+    h1 {
+        text-align: center;
+        color: $white;
+    }
+
+    input {
+        font-family: Metropolis;
+
+        &:read-only {
+            background-color: $white !important;
+            border-bottom: dashed 1px $grey !important;
+        }
+
+        #cep {
+            border: solid 1px $grey !important;
+        }
+
+        #logradouro {
+            font-weight: bold !important;
+        }
+    }
+
+    .error {
+        font-weight: bold;
+    }
+
+    iframe {
+        width: 100%;
+        height: 400px;
+        border-radius: 3px;
+        border: $lightGreen solid 1px;
+    }
+
+    button {
+        &#search,
+        &#research {
+            width: 100%;
+            background-color: $lightGreen;
+            color: $white;
+        }
+    
+        &#search:disabled,
+        &#research:disabled {
+            border: 1px solid $grey;
+            background-color: $disable;
+            color: $darkGrey;
+        }
+    }
+}
